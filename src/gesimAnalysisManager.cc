@@ -243,9 +243,10 @@ void gesimAnalysisManager::EndOfEvent(const G4Event* evt){
         if (DetE){
           DetW /= DetE;
           //fHisto->FillHisto(0,DetE,DetW); // Detector histogram
-          fHisto->FillTuple(0,0,SimulateEnergyResolution(DetE)/MeV);
-          fHisto->FillTuple(0,1,DetE/MeV);
-          fHisto->FillTuple(0,2,GenE/MeV);
+          //fHisto->AddTuple( "T1", "Hits","double Energy, TrueEnergy, GenEnergy, GenX, GenY, GenZ" );
+          fHisto->FillTuple(0,0,SimulateEnergyResolution(DetE)/MeV); // Energy, smearead by the sigma from Th228
+          fHisto->FillTuple(0,1,DetE/MeV); // TrueEnergy
+          fHisto->FillTuple(0,2,GenE/MeV); // GenEnergy
           fHisto->FillTuple(0,3,GenX/mm);
           fHisto->FillTuple(0,4,GenY/mm);
           fHisto->FillTuple(0,5,GenZ/mm);
@@ -312,7 +313,7 @@ G4double gesimAnalysisManager::SimulateEnergyResolution(G4double energy){
   if(fDetId == "2"){
     sigma = 0.454428*keV + 5.148e-4 * energy; // based on th228-pos1 actual data
   }else if (fDetId == "3"){
-    sigma = 0.559765*keV + 2.95347e-4 * energy; // based on th228, ba133 at pos1, actual data
+    sigma = 1.368*keV + 0.0003425 * energy; // based on th228, ba133 at pos1, actual data, April 2024
   }else if (fDetId == "4"){
     sigma = 0.646230*keV + 3.36643e-4 * energy; // based on th228, ba133, co60, c057 on det face, actual data taken at UA
   }

@@ -1,0 +1,37 @@
+Results from readtree.cc, histos at TrueEnergyHistogram1mi.root and TrueEnergyHistogram5mi.root
+
+********************************************
+Number of entries: 1000000
+********************************************
+Bin number: 2663
+No of entries in bin: 8962
+Standard deviation (bin error): 94.6678
+Bin limits: 4.43667 - 4.43833
+********************************************
+Efficiency: 0.008962 +/- 9.46678e-05
+Upper limit efficiency: 0.00905667
+Lower limit efficiency: 0.00886733
+********************************************
+
+from Energy fit (see EnergyHistogram_1mi_fit)
+ A            8.925 +- 0.099 
+
+
+
+
+
+********************************************
+Number of entries: 5000000
+********************************************
+Bin number: 2663
+No of entries in bin: 48682
+Standard deviation (bin error): 220.64
+Bin limits: 4.43667 - 4.43833
+********************************************
+Efficiency: 0.0097364 +/- 4.4128e-05
+Upper limit efficiency: 0.00978053
+Lower limit efficiency: 0.00969227
+*******************************************
+
+from Energy fit (see EnergyHistogram_5mi_fit)
+ A            48.55 +-  0.22
