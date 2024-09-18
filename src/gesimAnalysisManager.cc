@@ -313,7 +313,7 @@ G4double gesimAnalysisManager::SimulateEnergyResolution(G4double energy){
   if(fDetId == "2"){
     sigma = 0.454428*keV + 5.148e-4 * energy; // based on th228-pos1 actual data
   }else if (fDetId == "3"){
-    sigma = 1.368*keV + 0.0003425 * energy; // based on th228, ba133 at pos1, actual data, April 2024
+    sigma = 1.367*keV + 0.0003355 * energy; // based on th228, actual data, April 2024
   }else if (fDetId == "4"){
     sigma = 0.646230*keV + 3.36643e-4 * energy; // based on th228, ba133, co60, c057 on det face, actual data taken at UA
   }

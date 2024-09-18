@@ -21,12 +21,12 @@
 /process/em/auger true
 
 
-/histo/fileName AmBe_v10 # output root file name
+/histo/fileName AmBe_GeSim_am241spectrum_10mievts # output root file name
 #BEGIN seed
 /random/setSeeds 9097
 #END seed
 
 
-/run/beamOn 5000000 
-#100k events 
+/run/beamOn 10000000
+
 

@@ -16,7 +16,7 @@ usage root 'readtree.cc' -q
 
 void readtree() {
     // Open the ROOT file
-    TFile* file = TFile::Open("/home/amslivar/work/AmBe_v2/AmBe_GeSim_efficiency/AmBe_1mi_corrected.root");
+    TFile* file = TFile::Open("/home/amslivar/work/AmBe_v2/GeIII/AmBe_GeSim_722keV.root");
 
     // Get the TTree
     TTree* tree = (TTree*)file->Get("tT1");
@@ -26,7 +26,7 @@ void readtree() {
     tree->SetBranchAddress("TrueEnergy", &TrueEnergy);
 
     // Create a histogram for TrueEnergy
-    TH1F* hTrueEnergy = new TH1F("hTrueEnergy", "True Energy Distribution;True Energy (MeV);Counts / 1.66 keV", 3000, 0, 5); // Adjust binning and range as needed
+    TH1F* hTrueEnergy = new TH1F("hTrueEnergy", "True Energy Distribution;True Energy (MeV);Counts / 1.25 keV", 800, 0, 1); // Adjust binning and range as needed
 
     // Loop over the tree entries and fill the histogram
     Long64_t nEntries = tree->GetEntries();
@@ -40,9 +40,9 @@ void readtree() {
     TCanvas* canvas = new TCanvas("canvas", "True Energy Histogram", 800, 600);
     canvas->SetLogy(); 
     hTrueEnergy->Draw();
-    canvas->SaveAs("TrueEnergyHistogram1mi.root");
+    canvas->SaveAs("TrueEnergyHistogram_722keV.root");
 
-    int binNumber = 2663; // this should not have been hard coded, but it is easier like this for now
+    int binNumber = 578; // this should not have been hard coded, but it is easier like this for now
         // so i can actually see the root files and adjust the bin number accordingly
 
 

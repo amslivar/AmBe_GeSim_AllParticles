@@ -1113,6 +1113,10 @@ G4VPhysicalVolume* gesimDetectorConstruction::Construct()
     fInnerCavityX = fInnerShieldingX - 2.0*fInnerShieldingThickness;
     fInnerCavityY = fInnerShieldingY - 2.0*fInnerShieldingThickness + chamberSizeTweak;
     fInnerCavityZ = fInnerShieldingZ - 2.0*fInnerShieldingThickness + chamberSizeTweak;
+    G4cout << "Inner Cavity X: " << fInnerCavityX << G4endl;
+    G4cout << "Inner Cavity Y: " << fInnerCavityY << G4endl;
+    G4cout << "Inner Cavity Z: " << fInnerCavityZ << G4endl;
+
   }
 
   fOuterShieldingX = 40.0*inch;
