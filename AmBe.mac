@@ -7,10 +7,10 @@
 /gesim/source/setSourcePosition LZAmBe2inOuterWCapsuleEndcap #source geometry name: LZAmBe2Remote for AmBe without outer tungsten capsule in remote position, LZAmBe2inOuterWCapsuleRemote for AmBe in outer tungsten capsule in remote position, LZAmBe2inOuterWCapsuleEndcap for AmBe in outer tungsten capsule on endcap
 
 #uncomment the following 4 lines to get visualization files (.wrl); comment if you need to simulate a large amount of particles, e.g. > 1000
-#/vis/open VRML2FILE
-#/vis/drawVolume
-#/vis/scene/add/trajectories
-#/vis/scene/endOfEventAction accumulate
+/vis/open VRML2FILE
+/vis/drawVolume
+/vis/scene/add/trajectories
+/vis/scene/endOfEventAction accumulate
 
 /run/initialize
 /grdm/analogueMC 1
@@ -21,12 +21,11 @@
 /process/em/auger true
 
 
-/histo/fileName AmBe_GeSim_am241spectrum_10mievts # output root file name
+/histo/fileName AmBe_GeSim_anspectrum_100 # output root file name
 #BEGIN seed
 /random/setSeeds 9097
 #END seed
 
 
-/run/beamOn 10000000
-
+/run/beamOn 100
 
