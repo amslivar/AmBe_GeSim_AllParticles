@@ -15,6 +15,7 @@
 #include "G4Gamma.hh"
 #include "G4Electron.hh"
 #include "G4Positron.hh"
+#include "G4Neutron.hh"
 
 #include "G4UnitsTable.hh"
 #include "G4LossTableManager.hh"

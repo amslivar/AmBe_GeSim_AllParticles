@@ -22,6 +22,8 @@
 #include "G4BaryonConstructor.hh"
 #include "G4IonConstructor.hh"
 
+#include "G4Neutron.hh"
+
 //ShortLived
 #include "G4ShortLivedConstructor.hh"
 
